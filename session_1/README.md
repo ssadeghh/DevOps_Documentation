@@ -32,4 +32,23 @@ GPT was created to fix the limitations of MBR.
 - If you have UEFI, you have to use GPT.
 
 ## Implement Senario
+to see all the block devices and get 'ls' from block devices write:
+```bash
+sadegh@sadegh:~$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0                       7:0    0 63.9M  1 loop /snap/core20/2318
+loop1                       7:1    0   87M  1 loop /snap/lxd/27037
+loop2                       7:2    0   87M  1 loop /snap/lxd/29351
+loop3                       7:3    0 63.9M  1 loop /snap/core20/2105
+loop4                       7:4    0 40.4M  1 loop /snap/snapd/20671
+loop5                       7:5    0 38.8M  1 loop /snap/snapd/21759
+sda                         8:0    0 25.2G  0 disk
+├─sda1                      8:1    0    1M  0 part
+├─sda2                      8:2    0    2G  0 part /boot
+└─sda3                      8:3    0 23.2G  0 part
+  └─ubuntu--vg-ubuntu--lv 253:0    0 11.6G  0 lvm  /
+```
 
+linux names the files with its structure and will name them with *hd** (for old hard like PATA) or *sd** (for newer hard like SATA) you can see the structure of naming in the below image 
+
+![mbr](./assets/linux-hard-name-structure.png)
